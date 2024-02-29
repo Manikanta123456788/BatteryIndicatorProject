@@ -1,0 +1,157 @@
+:root {
+    --gradient-color-red: linear-gradient(90deg,
+              hsl(7, 89%, 46%) 15%,
+              hsl(11, 93%, 68%) 100%);
+    --gradient-color-orange: linear-gradient(90deg,
+              hsl(22, 89%, 46%) 15%,
+              hsl(54, 90%, 45%) 100%);
+    --gradient-color-yellow: linear-gradient(90deg,
+              hsl(54, 89%, 46%) 15%,
+              hsl(92, 90%, 45%) 100%);
+    --gradient-color-green: linear-gradient(90deg,
+              hsl(92, 89%, 46%) 15%,
+              hsl(92, 90%, 68%) 100%);
+
+    --text-color: rgb(37, 37, 37);
+    --text-color-light: #A1A1A1;
+    --body-color: hsl(0, 0%, 98%);
+    --container-color: hsl(0, 0%, 93%);
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-size: 14px;
+    background-color:grey;
+    color: green;
+  }
+
+  .battery {
+    height: 700px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .battery__card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color:yellow;
+     display: flex;
+            flex-direction: column;
+    justify-items: center;
+            justify-content: center; 
+
+  }
+  
+  .battery__text {
+    margin-bottom:140px;
+    text-align: center;
+    color:Blue;
+  }
+  
+  .battery__percentage {
+    text-align: center;
+  }
+  
+  .battery__status {
+    position: absolute;
+    bottom:10px;
+    left: 40%;
+  }
+  
+  .battery__pill {
+    position: relative;
+    width: 75px;
+    height:100px;
+    background-color: white;
+     border-radius:4px;
+    margin-bottom: 200px;
+    margin-top: -490px;
+  }
+  
+  .battery__level {
+    position: absolute;
+    inset: 2px;
+    border-radius: 4px;
+    overflow:hidden;
+  }
+  
+  .battery__liquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+  }
+  
+  @keyframes animated-charging-battery {
+    0% {
+      text-shadow: none;
+    }
+    100% {
+      text-shadow: 0 0 6px #a9f764;
+    }
+  }
+  
+  @-webkit-keyframes animated-low-battery {
+    0% {
+      text-shadow: none;
+    }
+    100% {
+      text-shadow: 0 0 8px #de250d;
+    }
+  }
+  
+  @keyframes animated-low-battery {
+    0% {
+      text-shadow: none;
+    }
+    100% {
+      text-shadow: 0 0 8px #de250d;
+    }
+  }
+  
+  .gradient-color-red,
+  .gradient-color-red::after {
+    background: var(--gradient-color-red);
+  }
+  
+  .gradient-color-orange,
+  .gradient-color-orange::after {
+    background: var(--gradient-color-orange);
+  }
+  
+  .gradient-color-yellow,
+  .gradient-color-yellow::after {
+    background: var(--gradient-color-yellow);
+  }
+  
+  .gradient-color-green,
+  .gradient-color-green::after {
+    background: var(--gradient-color-green);
+  }
+  
+  
+  @media screen and (max-width: 320px) {
+    .battery__card {
+      zoom: .8;
+    }
+  }
+  
+  @media screen and (min-width: 430px) {
+    .battery__card {
+      width: 200px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .battery__card {
+      zoom: 1.5;
+    }
+  }
+  
